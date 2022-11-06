@@ -16,7 +16,7 @@ const Editpost = ({posts,handledit,edittitle,setEditTitle,editbody,setEditBody})
     <main className='NewPost'>
       <form className='newPostForm' onSubmit={(e)=>e.preventDefault()}>
 
-      {(edittitle && editbody ) && 
+      {(edittitle || editbody ) && 
         <>
        <label htmlFor='postTitle'>Title:</label>
        <input required id='postTitle' type="text" value={edittitle} onChange={(e)=>setEditTitle(e.target.value)}/>
